@@ -1,0 +1,101 @@
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url(..//images/background2.jpg);
+    background-size: cover;
+  }
+  
+  h1 {
+      color:white;
+  }
+  .hero-full-screen .middle-content-section {
+    text-align: center;
+    color: #fefefe;
+  }
+  
+  .hero-full-screen .top-content-section {
+    width: 100%;
+  }
+  
+  .hero-full-screen .bottom-content-section {
+    padding: 1rem;
+  }
+  
+  .hero-full-screen .bottom-content-section svg {
+    height: 3.75rem;
+    width: 3.75rem;
+    fill: #fefefe;
+  }
+  
+  .hero-full-screen .top-bar {
+    background: transparent;
+  }
+  
+  .hero-full-screen .top-bar .menu {
+    background: transparent;
+  }
+  
+  .hero-full-screen .top-bar .menu-text {
+    color: #fefefe;
+  }
+  
+  .hero-full-screen .top-bar .menu li {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .hero-full-screen .top-bar .menu a {
+    color: #fefefe;
+    font-weight: bold;
+  }
+
+
+  .translucent-form-overlay {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(54, 54, 54, 0.8);
+    padding: 20px;
+    color: #fefefe;
+  }
+  
+  .translucent-form-overlay .columns.row {
+    display: block;
+  }
+  
+  .translucent-form-overlay h3, .translucent-form-overlay label {
+      text-align:left;
+    color: #fefefe;
+  }
+  
+  .translucent-form-overlay input, .translucent-form-overlay select {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::-webkit-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input:-ms-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::placeholder {
+    color: #8a8a8a;
+  }
+  
+  
