@@ -1,4 +1,19 @@
+/* sized for mobile */
+@media screen and (max-width: 1024px) {
+    body {
+    background: url("../images/background2.JPG");
+    }
+    .slider {
+        display: none;
+    }
+}
+
 /* body css starts here */
+.slider {
+    z-index: -1;
+    bottom: 50px;
+}
+
 .hero-full-screen {
     height: 100vh;
     display: -webkit-flex;
@@ -13,7 +28,6 @@
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background: url(..//images/background2.jpg);
     background-size: cover;
   }
   
@@ -65,6 +79,7 @@
     font-weight: bold;
   }
 
+  /* overlay starts here */
 
   .translucent-form-overlay {
     max-width: 500px;
@@ -121,6 +136,7 @@
   
   @media screen and (max-width: 640px) {
     .responsive-card-table {
+        top: 100px;
       
     }
 
@@ -176,9 +192,7 @@
 
   /* nav bar css starts here */
 
-.navOption {
-    width: 
-}
+
   
 .foundation-5-top-bar {
     background: #333;
