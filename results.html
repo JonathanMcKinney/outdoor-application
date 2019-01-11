@@ -11,83 +11,88 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/outdoorStyle.css">
 </head>
-<div class="top-bar foundation-5-top-bar">
-    <div class="top-bar-title">
-        <strong>Hikeable | Trails</strong>
-    </div>
-    <div class="top-bar-right">
-        <ul class="menu">
-                   <li><input type="text" placeholder="Location"></li>
-                    <li><select name="status" type="text" class="navOption">
-                    <option>Activity</option>
-                    <option value="walking" id="walking-navbar">Walking Trails     </option>
-                    <option value="mountain" id="mountain-navbar">Mountain Biking</option>
-                  </select></li>
-            <li><select name="status" type="text" class="navOption">
-                    <option>Distance</option>
-                    <option value="5" id="option-5-navbar">5        </option>
-                    <option value="10" id="option-10-navbar">10</option>
-                    <option value="20" id="option-20-navbar">20</option>
-                    <option value="50" id="option-50-navbar">50</option>
-                  </select></li>
-            <li><button type="button" class="button search-navbar">Search</button></li>
-        </ul>
-    </div>
-</div>
-<body>
-    <div class="slider">
-        <img class="mySlides" src="assets/images/background2.JPG">
-        <img class="mySlides" src="assets/images/background3.JPG">
-        <img class="mySlides" src="assets/images/background4.JPG">
-        <img class="mySlides" src="assets/images/background5.JPG">
-    </div>
-    <div class="hero-full-screen">
-        <div class="middle-content-section">
-            <div class="translucent-form-overlay">
-                <table class="responsive-card-table unstriped">
-                    <thead>
-                        <tr>
-                            <th>Trail Name</th>
-                            <th>Distance</th>
-                            <th>Weather</th>
-                            <th>Trail Image</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="trailName">Bruce</td>
-                            <td data-label="distance">Wayne</td>
-                            <td data-label="weather"> <span>Temp:</span><br>
-                                <span>Humidity:</span>
-                                
-                            </td>
-                            <td data-label="trailImage">picture here</td>
-                        </tr>
-                        <tr>
-                            <td data-label="First Name">Peter</td>
-                            <td data-label="Last Name">Parker</td>
-                            <td data-label="Hero Title">Spiderman</td>
-                            <td data-label="trailImage">picture here</td>
-                        </tr>
-                        <tr>
-                            <td data-label="First Name">Bruce</td>
-                            <td data-label="Last Name">Banner</td>
-                            <td data-label="Hero Title">The Hulk</td>
-                            <td data-label="trailImage">picture here</td>
-                        </tr>
-                        <tr>
-                            <td data-label="First Name">Clark</td>
-                            <td data-label="Last Name">Kent</td>
-                            <td data-label="Hero Title">Superman</td>
-                            <td data-label="trailImage">picture here</td>
-                        </tr>
-                    </tbody>
-                </table>
+<header>
+        <div class="top-bar foundation-5-top-bar">
+            <div class="top-bar-title">
+                <strong>Hikeable | Trails</strong>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><input type="text" placeholder="Location"></li>
+                    <li><select name="status" type="text" class="navOption" id="navActivity">
+                            <option>Activity</option>
+                            <option value="walking" id="walking-navbar">Walking Trails </option>
+                            <option value="mountain" id="mountain-navbar">Mountain Biking</option>
+                        </select></li>
+                    <li><select name="status" type="text" class="navOption" id="navDistance">
+                            <option>Distance</option>
+                            <option value="5" id="option-5-navbar">5 </option>
+                            <option value="10" id="option-10-navbar">10</option>
+                            <option value="20" id="option-20-navbar">20</option>
+                            <option value="50" id="option-50-navbar">50</option>
+                        </select></li>
+                    <li><button type="button" class="button search-navbar">Search</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="slider">
+            <img class="mySlides" src="assets/images/background2.JPG">
+            <img class="mySlides" src="assets/images/background3.JPG">
+            <img class="mySlides" src="assets/images/background4.JPG">
+            <img class="mySlides" src="assets/images/background5.JPG">
+        </div>
+        <div class="hero-full-screen">
+            <div class="middle-content-section">
+                <div class="translucent-form-overlay">
+                    <table class="responsive-card-table unstriped">
+                        <thead>
+                            <tr>
+                                <th>Trail Name</th>
+                                <th>Distance</th>
+                                <th>Weather</th>
+                                <th>Trail Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="trailName">Bruce</td>
+                                <td data-label="distance">Wayne</td>
+                                <td data-label="weather"> <span>Temp:</span><br>
+                                    <span>Humidity:</span>
+
+                                </td>
+                                <td data-label="trailImage">picture here</td>
+                            </tr>
+                            <tr>
+                                <td data-label="First Name">Peter</td>
+                                <td data-label="Last Name">Parker</td>
+                                <td data-label="Hero Title">Spiderman</td>
+                                <td data-label="trailImage">picture here</td>
+                            </tr>
+                            <tr>
+                                <td data-label="First Name">Bruce</td>
+                                <td data-label="Last Name">Banner</td>
+                                <td data-label="Hero Title">The Hulk</td>
+                                <td data-label="trailImage">picture here</td>
+                            </tr>
+                            <tr>
+                                <td data-label="First Name">Clark</td>
+                                <td data-label="Last Name">Kent</td>
+                                <td data-label="Hero Title">Superman</td>
+                                <td data-label="trailImage">picture here</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/outdoorJS.js"></script>
 </body>
 
 </html>
