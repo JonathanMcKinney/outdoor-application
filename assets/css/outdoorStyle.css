@@ -189,10 +189,55 @@
       z-index: 0;
     }
   }
-
   /* nav bar css starts here */
+  @media screen and (max-width: 850px) {
+    
+    .top-bar {
+        height: 200px;
+        position: relative;
+    }
 
+    .top-bar-title {
+        position: absolute;
+        top: 10px;
+        left: 10px;
 
+    }
+    .menu {
+        position:absolute;
+        left: 10px;
+        top: 50px;
+    }
+
+    .navOption {
+        position: absolute;
+        top: 0px;
+    }
+    
+    #navActivity {
+        top:50px;
+        left: 0px;  
+    }
+
+    #navDistance {
+        top: 100px;
+        left: 0px;
+    }
+
+    .button {
+        position: absolute;
+        right: -75px;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+  }
+
+.navOption {
+    width: 175px;
+    margin-right: 20px;
+}
   
 .foundation-5-top-bar {
     background: #333;
