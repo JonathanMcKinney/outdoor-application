@@ -38,7 +38,16 @@ var submitClick = function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
+                var results = response.trails;
+                for (i = 0; i < results.length; i++){
+
+                 // loop through array
+                
+                    
+                
+                }
             });
+
         }
 
         else if (activity === "biking") {
@@ -52,13 +61,7 @@ var submitClick = function () {
             });
     
         };
-
-
-
     });
-
-
-
 
 
 }
