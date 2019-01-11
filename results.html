@@ -8,27 +8,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css"
         integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
         crossorigin="anonymous">
-    <!-- Compressed JavaScript -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/outdoorStyle.css">
 </head>
 <div class="top-bar foundation-5-top-bar">
     <div class="top-bar-title">
-        <strong>Hikeable | Results</strong>
+        <strong>Hikeable | Trails</strong>
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-              
                    <li><input type="text" placeholder="Location"></li>
                     <li><select name="status" type="text" class="navOption">
                     <option>Activity</option>
-                    <option value="walking" id="walking-navbar">Walking Trails</option>
+                    <option value="walking" id="walking-navbar">Walking Trails     </option>
                     <option value="mountain" id="mountain-navbar">Mountain Biking</option>
                   </select></li>
             <li><select name="status" type="text" class="navOption">
                     <option>Distance</option>
-                    <option value="5" id="option-5-navbar">5</option>
+                    <option value="5" id="option-5-navbar">5        </option>
                     <option value="10" id="option-10-navbar">10</option>
                     <option value="20" id="option-20-navbar">20</option>
                     <option value="50" id="option-50-navbar">50</option>
@@ -38,19 +35,13 @@
     </div>
 </div>
 <body>
+    <div class="slider">
+        <img class="mySlides" src="assets/images/background2.JPG">
+        <img class="mySlides" src="assets/images/background3.JPG">
+        <img class="mySlides" src="assets/images/background4.JPG">
+        <img class="mySlides" src="assets/images/background5.JPG">
+    </div>
     <div class="hero-full-screen">
-        <div class="top-content-section">
-            <div class="top-bar">
-                <div class="top-bar-left">
-                    <ul class="menu">
-                        <!-- <li class="menu-text"><img src="http://placehold.it/75x30" alt="logo"></li>
-                        <li><a href="#">One</a></li>
-                        <li><a href="#">Two</a></li>
-                        <li><a href="#">Three</a></li> -->
-                    </ul>
-                </div>
-            </div>
-        </div>
         <div class="middle-content-section">
             <div class="translucent-form-overlay">
                 <table class="responsive-card-table unstriped">
@@ -58,9 +49,7 @@
                         <tr>
                             <th>Trail Name</th>
                             <th>Distance</th>
-                            <th>Weather
-                                
-                            </th>
+                            <th>Weather</th>
                             <th>Trail Image</th>
                         </tr>
                     </thead>
@@ -96,14 +85,9 @@
                 </table>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
-    <div id="main-content-section" data-magellan-target="main-content-section">
-        <!-- your content goes here -->
-    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/javascript/outdoorJS.js"></script>
 </body>
 
 </html>
