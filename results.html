@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/outdoorStyle.css">
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 </head>
 <header>
         <div class="top-bar foundation-5-top-bar">
@@ -48,7 +49,7 @@
         <div class="hero-full-screen">
             <div class="middle-content-section">
                 <div class="translucent-form-overlay">
-                    <table class="responsive-card-table unstriped">
+                    <table class="responsive-card-table unstriped" id="results-table">
                         <thead>
                             <tr>
                                 <th>Trail Name</th>

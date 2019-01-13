@@ -1,12 +1,23 @@
-//create on click function 
-//take values from location,activity, and distance
-//plug in the values to the api by concatination
-//api takes the data and spits data back out according to what we put in.
-//api puts results onto new page where we want it
+
+var config = {
+    apiKey: "AIzaSyDifrYi4RM3kSNwsoMgxxtqWToBvPIFQi0",
+    authDomain: "outdoor-app-1f163.firebaseapp.com",
+    databaseURL: "https://outdoor-app-1f163.firebaseio.com",
+    projectId: "outdoor-app-1f163",
+    storageBucket: "outdoor-app-1f163.appspot.com",
+    messagingSenderId: "201185461812"
+  };
+
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
+////////////////////////////////////////////////////////////////////////
 
 var activity;
 
 var submitClick = function () {
+    event.preventDefault();
     var location = $("#location-input").val().trim();
     console.log(location);
     activity = $("#activity").val();
@@ -38,14 +49,8 @@ var submitClick = function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
-                var results = response.trails;
-                for (i = 0; i < results.length; i++){
-
-                 // loop through array
-                
-                    
-                
-                }
+                // var results = response.trails;
+                database.ref().push(response);
             });
 
         }
@@ -58,16 +63,42 @@ var submitClick = function () {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
+                // var results = response.trails;
+                database.ref().push(response);
             });
-    
         };
     });
-
-
 }
 
-    
-
-
-
 $("#submitButton").on("click", submitClick);
+
+
+//Code start for results.html
+
+$(document).ready()
+
+database.ref().on("child_added", function(childSnap) {
+    console.log(childSnap.val());
+    
+    for (var i = 0; i < results.length; i++) {
+        var name = childSnap.val().results.name;
+        var length = childSnap.val().results.length;
+        var difficulty = childSnap.val().results.difficulty;
+        var cStatus = childSnap.val().results.conditionStatus;
+        var cDate = childSnap.val().results.conditionDate;
+        var image = childSnap.val().results.imgSqSmall;
+
+        var tableRow = $("<tr>").append(
+            $("<td>").text(name),
+            $("<td>").text(length),
+            $("<td>").text(difficulty),
+            $("<td>").text(cStatus),
+            $("<td>").text(cDate),
+            $("<td>").text(image),
+        );
+
+        $("#results-table > tbody").append(tableRow);
+    };
+});
+
+
