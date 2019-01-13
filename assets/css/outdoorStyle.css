@@ -1,21 +1,39 @@
-/* sized for mobile */
-@media screen and (max-width: 1024px) {
-    body {
-    background: url("../images/background2.JPG");
-    }
-    .slider {
-        display: none;
-    }
+/* body css starts here */
+body {
+  position: relative;
 }
 
-/* body css starts here */
+header {
+  position: fixed;
+  top: -20px;
+  background-image: url(../images/white-waves.png);
+  text-align: center;
+  width: 100vw;
+  height: 20vh;
+  padding: 10px;
+  border-bottom: 2px solid darkgray; 
+  font-family: 'Times New Roman', Times, serif; 
+  z-index: 1;
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+img {
+  height: 100vh;
+  width: 100vw;
+}
+
 .slider {
     z-index: -1;
     bottom: 50px;
 }
 
 .hero-full-screen {
-    height: 100vh;
+    height: 70vh;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -26,14 +44,15 @@
         -ms-flex-align: center;
             align-items: center;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+      -ms-flex-pack: justify;
+        justify-content: space-between;
     background-size: cover;
+    padding: 5%;
+    position: relative;
+    top: 10vh;
+    z-index: 0;
   }
-  
-  h1 {
-      color:white;
-  }
+
   .hero-full-screen .middle-content-section {
     text-align: center;
     color: #fefefe;
@@ -113,170 +132,27 @@
   .translucent-form-overlay input::placeholder {
     color: #8a8a8a;
   }
-  
-/* css table on results page starts here */
-  
-.responsive-card-table {
-    border-collapse: collapse;
+
+  button {
+    position: relative;
   }
   
-  .responsive-card-table.unstriped tbody {
-    background-color: transparent;
-  }
+
+  /*Footer begins here*/
   
-  .responsive-card-table th {
-    background-color: #e6e6e6;
-  }
-  
-  .responsive-card-table tr,
-  .responsive-card-table th,
-  .responsive-card-table td {
-    border: 1px solid #0a0a0a;
-  }
-  
-  @media screen and (max-width: 640px) {
-    .responsive-card-table {
-        top: 100px;
-      
-    }
-
-    
-    .responsive-card-table thead tr {
-      position: absolute;
-      top: -9999em;
-      left: -9999em;
-    }
-    .responsive-card-table tr {
-      border: 1px solid #0a0a0a;
-      display: block;
-    }
-    .responsive-card-table tr + tr {
-      margin-top: 1.5rem;
-    }
-    .responsive-card-table td {
-      border: none;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      border-bottom: 1px solid #0a0a0a;
-      padding-left: 50%;
-      position: relative;
-    }
-    .responsive-card-table td:before {
-      content: attr(data-label);
-      display: inline-block;
-      font-weight: bold;
-      line-height: 1.5;
-      margin-left: -100%;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-    .responsive-card-table td:after {
-      content: '';
-      position: absolute;
-      background: #e6e6e6;
-      width: 45%;
-      height: 95%;
-      left: 1px;
-      top: 1px;
-      z-index: 0;
-    }
+  footer {
+    position: fixed;
+    bottom: 0px;
+    background-image: url(../images/white-waves.png);
+    text-align: center;
+    width: 100vw;
+    height: 10vh;
+    padding: 10px;
+    border-top: 2px solid darkgray; 
+    font-family: 'Times New Roman', Times, serif; 
   }
 
-  /* nav bar css starts here */
 
- @media screen and (max-width: 850px) {
-
-    .top-bar {
-        height: 200px;
-        position: relative;
-    }
-
-    .top-bar-title {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-
-    }
-    .menu {
-        position:absolute;
-        left: 10px;
-        top: 50px;
-    }
-
-    .navOption {
-        position: absolute;
-        top: 0px;
-    }
-
-    #navActivity {
-        top:50px;
-        left: 0px;  
-    }
-
-    #navDistance {
-        top: 100px;
-        left: 0px;
-    }
-
-    .button {
-        position: absolute;
-        right: -75px;
-    }
-
-    .container {
-        margin-top: 20px;
-    }
-  }
-
-.navOption {
-    width: 175px;
-    margin-right: 20px;
-}
-
-.foundation-5-top-bar {
-    background: #333;
-
-}
-.foundation-5-top-bar {
-    background: #333;
-    color: #fefefe;
-  }
-  
-  .foundation-5-top-bar .menu {
-    background: #333;
-  }
-  
-  .foundation-5-top-bar .menu a {
-    color: #fefefe;
-  }
-  
-  .foundation-5-top-bar .is-dropdown-submenu {
-    border: 0;
-  }
-  
-  .foundation-5-top-bar .is-dropdown-submenu-item.opens-right a::after {
-    border-color: transparent transparent transparent #fefefe;
-  }
-  
-  .foundation-5-top-bar .js-drilldown-back > a::before {
-    border-color: transparent #fefefe transparent transparent;
-  }
-  
-  .foundation-5-top-bar .is-drilldown-submenu-parent > a::after {
-    border-color: transparent transparent transparent #fefefe;
-  }
-  
-  .foundation-5-top-bar .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
-    border-color: #fefefe transparent transparent;
-  }
   
   
   

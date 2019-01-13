@@ -1,16 +1,27 @@
 <!DOCTYPe <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Results | Hikeable</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css"
-        integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
-        crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/outdoorStyle.css">
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hikeable</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css"
+            integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
+            crossorigin="anonymous">   
+       
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/outdoorStyle.css">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script>
+            jQuery.ajaxPrefilter(function(options) {
+             if (options.crossDomain && jQuery.support.cors) {
+              options.url = 'https://uncc-cors-proxy.herokuapp.com/' + options.url;
+          }
+        });
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    
+    </head>
 <header>
         <div class="top-bar foundation-5-top-bar">
             <div class="top-bar-title">
@@ -18,20 +29,20 @@
             </div>
             <div class="top-bar-right">
                 <ul class="menu">
-                    <li><input type="text" placeholder="Location"></li>
-                    <li><select name="status" type="text" class="navOption" id="navActivity">
+                    <li><input type="text" placeholder="Location" id="location-input"></li>
+                    <li><select name="status" type="text" class="navOption" id="activity">
                             <option>Activity</option>
-                            <option value="walking" id="walking-navbar">Walking Trails </option>
-                            <option value="mountain" id="mountain-navbar">Mountain Biking</option>
+                            <option value="hiking" id="walking-navbar">Hiking</option>
+                            <option value="biking" id="mountain-navbar">Mountain Biking</option>
                         </select></li>
-                    <li><select name="status" type="text" class="navOption" id="navDistance">
+                    <li><select name="status" type="text" class="navOption" id="distance">
                             <option>Distance</option>
-                            <option value="5" id="option-5-navbar">5 </option>
+                            <option value="5" id="option-5-navbar">5</option>
                             <option value="10" id="option-10-navbar">10</option>
                             <option value="20" id="option-20-navbar">20</option>
                             <option value="50" id="option-50-navbar">50</option>
                         </select></li>
-                    <li><button type="button" class="button search-navbar">Search</button></li>
+                    <li><button type="button" class="button search-navbar" id="submitButton">Search</button></li>
                 </ul>
             </div>
         </div>
@@ -51,47 +62,22 @@
                     <table class="responsive-card-table unstriped">
                         <thead>
                             <tr>
-                                <th>Trail Name</th>
+                                <th>Name</th>
                                 <th>Distance</th>
-                                <th>Weather</th>
+                                <th>Difficulty</th>
+                                <th>Status</th>
+                                <th>Status Updated</th>
                                 <th>Trail Image</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-label="trailName">Bruce</td>
-                                <td data-label="distance">Wayne</td>
-                                <td data-label="weather"> <span>Temp:</span><br>
-                                    <span>Humidity:</span>
 
-                                </td>
-                                <td data-label="trailImage">picture here</td>
-                            </tr>
-                            <tr>
-                                <td data-label="First Name">Peter</td>
-                                <td data-label="Last Name">Parker</td>
-                                <td data-label="Hero Title">Spiderman</td>
-                                <td data-label="trailImage">picture here</td>
-                            </tr>
-                            <tr>
-                                <td data-label="First Name">Bruce</td>
-                                <td data-label="Last Name">Banner</td>
-                                <td data-label="Hero Title">The Hulk</td>
-                                <td data-label="trailImage">picture here</td>
-                            </tr>
-                            <tr>
-                                <td data-label="First Name">Clark</td>
-                                <td data-label="Last Name">Kent</td>
-                                <td data-label="Hero Title">Superman</td>
-                                <td data-label="trailImage">picture here</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/outdoorJS.js"></script>
 </body>
