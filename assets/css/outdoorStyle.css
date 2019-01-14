@@ -22,6 +22,12 @@ h1 {
   font-size: 3em;
 }
 
+.myslides {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
 .slider {
     z-index: -1;
     bottom: 50px;
@@ -96,6 +102,7 @@ h1 {
   /* overlay starts here */
 
   .translucent-form-overlay {
+    max-width: 75vw;
     width: 100%;
     background-color: rgba(54, 54, 54, 0.8);
     padding: 20px;
