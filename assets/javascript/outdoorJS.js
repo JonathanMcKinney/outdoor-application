@@ -1,3 +1,4 @@
+
 var config = {
     apiKey: "AIzaSyDifrYi4RM3kSNwsoMgxxtqWToBvPIFQi0",
     authDomain: "outdoor-app-1f163.firebaseapp.com",
@@ -104,6 +105,6 @@ var config = {
         $("tbody").append(tableRow);
     };
 
-    database.ref().remove().child();
+    // database.ref().remove().child();
 
  });
