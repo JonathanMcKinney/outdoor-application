@@ -1,4 +1,8 @@
  /* css table on results page starts here */
+
+body{
+   background-color: black;
+ }
   
 .responsive-card-table {
     border-collapse: collapse;
@@ -127,10 +131,6 @@
 
 .foundation-5-top-bar {
     background: #333;
-
-}
-.foundation-5-top-bar {
-    background: #333;
     color: #fefefe;
   }
   
@@ -138,26 +138,118 @@
     background: #333;
   }
   
-  .foundation-5-top-bar .menu a {
-    color: #fefefe;
+
+  .myslides {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
   }
   
-  .foundation-5-top-bar .is-dropdown-submenu {
-    border: 0;
+  .slider {
+      z-index: -1;
   }
   
-  .foundation-5-top-bar .is-dropdown-submenu-item.opens-right a::after {
-    border-color: transparent transparent transparent #fefefe;
-  }
+  .hero-full-screen {
+      height: 70vh;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+          justify-content: space-between;
+      background-size: cover;
+      padding: 5%;
+      position: relative;
+      top: 10vh;
+      z-index: 0;
+    }
   
-  .foundation-5-top-bar .js-drilldown-back > a::before {
-    border-color: transparent #fefefe transparent transparent;
-  }
+    .hero-full-screen .middle-content-section {
+      text-align: center;
+      color: #fefefe;
+    }
+    
+    .hero-full-screen .top-content-section {
+      width: 100%;
+    }
+    
+    .hero-full-screen .bottom-content-section {
+      padding: 1rem;
+    }
+    
+    .hero-full-screen .bottom-content-section svg {
+      height: 3.75rem;
+      width: 3.75rem;
+      fill: #fefefe;
+    }
+    
+    .hero-full-screen .top-bar {
+      background: transparent;
+    }
+    
+    .hero-full-screen .top-bar .menu {
+      background: transparent;
+    }
+    
+    .hero-full-screen .top-bar .menu-text {
+      color: #fefefe;
+    }
+    
+    .hero-full-screen .top-bar .menu li {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    
+    .hero-full-screen .top-bar .menu a {
+      color: #fefefe;
+      font-weight: bold;
+    }
   
-  .foundation-5-top-bar .is-drilldown-submenu-parent > a::after {
-    border-color: transparent transparent transparent #fefefe;
-  }
+    /* overlay starts here */
   
-  .foundation-5-top-bar .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
-    border-color: #fefefe transparent transparent;
-  }
+    .translucent-form-overlay {
+      max-width: 75vw;
+      width: 100%;
+      background-color: rgba(54, 54, 54, 0.8);
+      padding: 20px;
+      color: #fefefe;
+    }
+    
+    .translucent-form-overlay .columns.row {
+      display: block;
+    }
+    
+    .translucent-form-overlay h3, .translucent-form-overlay label {
+        text-align:left;
+      color: #fefefe;
+    }
+    
+    .translucent-form-overlay input, .translucent-form-overlay select {
+      color: #8a8a8a;
+    }
+    
+    .translucent-form-overlay input::-webkit-input-placeholder {
+      color: #8a8a8a;
+    }
+    
+    .translucent-form-overlay input:-ms-input-placeholder {
+      color: #8a8a8a;
+    }
+    
+    .translucent-form-overlay input::placeholder {
+      color: #8a8a8a;
+    }
+  
+    button {
+      position: relative;
+    }
