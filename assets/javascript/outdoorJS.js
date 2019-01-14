@@ -40,7 +40,7 @@ var config = {
         lng = results[0].geometry.location.lng;
         console.log("this is the lng: " + lng);
  
-        if (activity === "walking") {
+        if (activity === "hiking") {
             var hikingAPI = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
             console.log("This is hiking: " + hikingAPI);
             $.ajax({
@@ -50,6 +50,7 @@ var config = {
                 console.log(response);
                 // var results = response.trails;
                 database.ref().push(response);
+                $("#anchorID")[0].click();
             });
  
         }
@@ -64,6 +65,7 @@ var config = {
                 console.log(response);
                 // var results = response.trails;
                 database.ref().push(response);
+                $("#anchorID")[0].click();
             });
         };
     });
@@ -78,14 +80,17 @@ var config = {
  
  database.ref().on("child_added", function(childSnap) {
     console.log(childSnap.val());
+    var results = childSnap.val().trails;
  
     for (var i = 0; i < results.length; i++) {
-        var name = childSnap.val().results.name;
-        var length = childSnap.val().results.length;
-        var difficulty = childSnap.val().results.difficulty;
-        var cStatus = childSnap.val().results.conditionStatus;
-        var cDate = childSnap.val().results.conditionDate;
-        var image = childSnap.val().results.imgSqSmall;
+        var name = results[i].name;
+        var length = results[i].length;
+        var difficulty = results[i].difficulty;
+        var cStatus = results[i].conditionStatus;
+        var cDate = results[i].conditionDate;
+        var image = results[i].imgSqSmall;
+
+        console.log(cStatus)
  
         var tableRow = $("<tr>").append(
             $("<td>").text(name),
@@ -93,9 +98,12 @@ var config = {
             $("<td>").text(difficulty),
             $("<td>").text(cStatus),
             $("<td>").text(cDate),
-            $("<td>").text(image),
+            $("<td>").html("<img src=" + image + ">"),
         );
  
-        $("#results-table > tbody").append(tableRow);
+        $("tbody").append(tableRow);
     };
+
+    database.ref().remove().child();
+
  });
