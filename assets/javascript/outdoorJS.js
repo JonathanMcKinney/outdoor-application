@@ -1,18 +1,5 @@
-var config = {
-    apiKey: "AIzaSyDifrYi4RM3kSNwsoMgxxtqWToBvPIFQi0",
-    authDomain: "outdoor-app-1f163.firebaseapp.com",
-    databaseURL: "https://outdoor-app-1f163.firebaseio.com",
-    projectId: "outdoor-app-1f163",
-    storageBucket: "outdoor-app-1f163.appspot.com",
-    messagingSenderId: "201185461812"
-  };
- 
-  firebase.initializeApp(config);
- 
-  var database = firebase.database();
- 
- ////////////////////////////////////////////////////////////////////////
- 
+
+
  var activity;
  
  var submitClick = function () {
@@ -48,8 +35,11 @@ var config = {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
+                var JSONresponse = JSON.stringify(response);
+                localStorage.clear();
+                localStorage.setItem("JSONresponse", JSONresponse);
+                console.log(JSONresponse);
                 // var results = response.trails;
-                database.ref().push(response);
                 $("#anchorID")[0].click();
             });
  
@@ -63,8 +53,11 @@ var config = {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
+                var JSONresponse = JSON.stringify(response);
+                localStorage.clear();
+                localStorage.setItem("JSONresponse", JSONresponse);
+                console.log(JSONresponse);
                 // var results = response.trails;
-                database.ref().push(response);
                 $("#anchorID")[0].click();
             });
         };
@@ -75,12 +68,11 @@ var config = {
  
  
  //Code start for results.html
- 
- $(document).ready()
- 
- database.ref().on("child_added", function(childSnap) {
-    console.log(childSnap.val());
-    var results = childSnap.val().trails;
+
+ var gotItem = localStorage.getItem("JSONresponse");
+ var nowParsed = JSON.parse(gotItem);
+ console.log(nowParsed);
+ var results = nowParsed.trails;
  
     for (var i = 0; i < results.length; i++) {
         var name = results[i].name;
@@ -102,8 +94,4 @@ var config = {
         );
  
         $("tbody").append(tableRow);
-    };
-
-    database.ref().remove().child();
-
- });
+    }
