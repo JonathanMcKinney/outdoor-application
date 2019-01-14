@@ -20,20 +20,22 @@
       }
     });
     </script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-    
-</head>
+
+</head> 
  
 <div class="slider">
-            <img class="mySlides" src="assets/images/background2.JPG">
-            <img class="mySlides" src="assets/images/background3.JPG">
-            <img class="mySlides" src="assets/images/background4.JPG">
-            <img class="mySlides" src="assets/images/background5.JPG">
-        </div>
+    <img class="mySlides" src="assets/images/img1.jpg">
+    <img class="mySlides" src="assets/images/img2.jpg">
+    <img class="mySlides" src="assets/images/img3.jpg">
+    <img class="mySlides" src="assets/images/img4.jpg">
+</div>
 <body>
+    <header class="header">
+        <h1>Hikeable</h1>
+        <p class="subtitle">Find your path.</p>
+    </header>
     <div class="hero-full-screen">
         <div class="middle-content-section">
-            <h1>Hikeable</h1>
             <div class="translucent-form-overlay">
                 <form>
                     <h3>Search Trails</h3>
@@ -46,7 +48,7 @@
                         <label>Activity
                             <select name="status" type="text" id="activity">
                                 <option>Activity</option>
-                                <option value="walking">Walking Trails</option>
+                                <option value="hiking">Hiking</option>
                                 <option value="biking">Mountain Biking</option>
                             </select>
                         </label>
@@ -68,9 +70,12 @@
                 </form>
             </div>
         </div>
+        <a id="anchorID" href="results.html" target="_self"></a>
+        <footer class="footer">
+            <p class="copy"><strong>Hikeable:</strong> by Clark Farriss, William Harrison, Michael Howell, and Jonathan McKinney</p>
+        </footer>
     </div>
-    </div>
-    <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/outdoorJS.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 </html>
