@@ -99,24 +99,23 @@ body{
         top: 50px;
     }
 
-    .navOption {
-        position: absolute;
-        top: 0px;
-    }
-
-    #navActivity {
+    #Activity {
+      position: absolute;
         top:50px;
         left: 0px;  
     }
 
-    #navDistance {
+    #Distance {
+      position: absolute;
         top: 100px;
         left: 0px;
     }
 
     .button {
         position: absolute;
+        top: 0px;
         right: -75px;
+
     }
 
     .container {
@@ -143,6 +142,7 @@ body{
     height: 100vh;
     width: 100vw;
     position: fixed;
+    top: 0;
   }
   
   .slider {
@@ -218,11 +218,12 @@ body{
     /* overlay starts here */
   
     .translucent-form-overlay {
-      max-width: 75vw;
       width: 100%;
       background-color: rgba(54, 54, 54, 0.8);
       padding: 20px;
       color: #fefefe;
+      position: relative;
+      top: -15vh;
     }
     
     .translucent-form-overlay .columns.row {
@@ -248,7 +249,7 @@ body{
     
     .translucent-form-overlay input::placeholder {
       color: #8a8a8a;
-    }
+    } 
   
     button {
       position: relative;

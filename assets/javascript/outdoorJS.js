@@ -28,7 +28,7 @@
         console.log("this is the lng: " + lng);
  
         if (activity === "hiking") {
-            var hikingAPI = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
+            var hikingAPI = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&maxResults=50&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
             console.log("This is hiking: " + hikingAPI);
             $.ajax({
                 url: hikingAPI,
@@ -46,7 +46,7 @@
         }
  
         else if (activity === "biking") {
-            var bikingAPI = "https://www.mtbproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
+            var bikingAPI = "https://www.mtbproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&maxResults=50&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
             console.log("this is the mountain biking: " + bikingAPI);
             $.ajax({
                 url: bikingAPI ,
@@ -85,8 +85,8 @@
         console.log(cStatus)
  
         var tableRow = $("<tr>").append(
-            $("<td>").text(name),
-            $("<td>").text(length),
+            $("<td>").html("<a href=" + results[i].url + ">" + name + "</a>"),
+            $("<td>").text(length + " miles"),
             $("<td>").text(difficulty),
             $("<td>").text(cStatus),
             $("<td>").text(cDate),
