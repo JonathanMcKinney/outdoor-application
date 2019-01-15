@@ -77,17 +77,17 @@
     for (var i = 0; i < results.length; i++) {
         var name = results[i].name;
         var length = results[i].length;
-        var difficulty = results[i].location;
+        var difficulty = results[i].difficulty;
         var cStatus = results[i].conditionStatus;
-        var cDate = results[i].stars;
+        var cDate = results[i].conditionDate;
         var image = results[i].imgSqSmall;
 
         console.log(cStatus)
  
         var tableRow = $("<tr>").append(
             $("<td data-label='Name'>").html("<a href=" + results[i].url + ">" + name + "</a>"),
+            $("<td data-label='Length'>").text(length + " miles"),
              $("<td data-label='Location'>").text(difficulty),
-             $("<td data-label='Length'>").text(length + " miles"),
             $("<td data-label='Status'>").text(cStatus),
             $("<td data-label='5 Star Rating'>").text(cDate + " Stars"),
             $("<td data-label='Trail Image'>").html("<img src=" + image + ">"),
