@@ -4,14 +4,14 @@ body{
    background-color: black;
  }
   
- .anchor-nav {
-   color: white;
- }
+.trl-img {
+  max-width: 100px;
+}
 
- .anchor-name {
-   color: black;
- }
- 
+.anchor-name {
+  text-align: left;
+  margin-left: 10px;
+}
 .responsive-card-table {
     border-collapse: collapse;
   }
@@ -31,12 +31,14 @@ body{
   }
   
   @media screen and (max-width: 640px) {
-    
+    .responsive-card-table {
+        top: 100px;
+      
+    } 
     .responsive-card-table thead tr {
       position: absolute;
-      top:-9999em;
+      top: -9999em;
       left: -9999em;
-      
     }
     .responsive-card-table tr {
       border: 1px solid #0a0a0a;
@@ -59,12 +61,13 @@ body{
       border-bottom: 1px solid #0a0a0a;
       padding-left: 50%;
       position: relative;
+      word-wrap: inherit;
     }
     .responsive-card-table td:before {
       content: attr(data-label);
       display: inline-block;
-       font-weight: bold;
-       line-height: 1.5; 
+      font-weight: bold;
+      line-height: 1.5;
       margin-left: -100%;
       width: 100%;
       position: relative;
@@ -74,12 +77,11 @@ body{
       content: '';
       position: absolute;
       background: #e6e6e6;
-      width: 45%;
+      width: 35%;
       height: 95%;
       left: 1px;
       top: 1px;
       z-index: 0;
-      
     }
   }
  
@@ -228,7 +230,7 @@ body{
       padding: 20px;
       color: #fefefe;
       position: relative;
-      top: -20vh;
+      top: -15vh;
     }
     
     .translucent-form-overlay .columns.row {
@@ -255,21 +257,7 @@ body{
     .translucent-form-overlay input::placeholder {
       color: #8a8a8a;
     } 
-
-    .trl-img {
-      max-width: 100px;
-    }
-
-    input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
   
     button {
       position: relative;
     }
-
-  
-
