@@ -35,10 +35,6 @@ body{
   }
   
   @media screen and (max-width: 640px) {
-    .responsive-card-table {
-      
-    }
-
     
     .responsive-card-table thead tr {
       position: absolute;
