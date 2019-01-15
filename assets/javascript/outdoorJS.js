@@ -1,4 +1,18 @@
 
+function validateNumber(event) {
+    var key = window.event ? event.keyCode : event.which;
+    if (event.keyCode === 8 || event.keyCode === 46) {
+        return true;
+    } else if ( key < 48 || key > 57 ) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+$(document).ready(function(){
+    $('[id^=distance]').keypress(validateNumber);
+});
 
 var activity;
  
@@ -10,6 +24,8 @@ var submitClick = function () {
    console.log("this is activity chosen: " + activity);
    var radius = $("#distance").val();
    console.log("this is distance chosen: " + radius);
+   var absoluteRadius = Math.abs(radius);
+   console.log("this is absolute radius: " + absoluteRadius);
    var lat;
    var lng;
 
@@ -28,7 +44,7 @@ var submitClick = function () {
        console.log("this is the lng: " + lng);
 
        if (activity === "hiking") {
-           var hikingAPI = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&maxResults=50&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
+           var hikingAPI = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + absoluteRadius + "&maxResults=50&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
            console.log("This is hiking: " + hikingAPI);
            $.ajax({
                url: hikingAPI,
@@ -46,7 +62,7 @@ var submitClick = function () {
        }
 
        else if (activity === "biking") {
-           var bikingAPI = "https://www.mtbproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + radius + "&maxResults=50&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
+           var bikingAPI = "https://www.mtbproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=" + absoluteRadius + "&maxResults=50&key=200406991-51cef123aaf15cad4674f56c0e8aa4f0"
            console.log("this is the mountain biking: " + bikingAPI);
            $.ajax({
                url: bikingAPI ,
