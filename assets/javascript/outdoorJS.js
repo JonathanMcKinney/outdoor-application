@@ -93,18 +93,19 @@ var results = nowParsed.trails;
    for (var i = 0; i < results.length; i++) {
        var name = results[i].name;
        var length = results[i].length;
-       var difficulty = results[i].difficulty;
+       var ascent = results[i].ascent;
        var cStatus = results[i].conditionStatus;
        var cDate = moment(results[i].conditionDate, "YYYY-MM-DD HH:mm:ss");
        var goodDate = cDate.format("MM-DD-YYYY");
        var image = results[i].imgSqSmall;
+    
 
        console.log(cStatus)
 
        var tableRow = $("<tr>").append(
            $("<td data-label='Name'>").html("<a href=" + results[i].url + " class='anchor-name'>" + name + "</a>"),
            $("<td data-label='Length'>").text(length + " miles"),
-            $("<td data-label='Location'>").text(difficulty),
+            $("<td data-label='Ascent'>").text(ascent + " feet"),
            $("<td data-label='Status'>").text(cStatus),
            $("<td data-label='Last Updated'>").text(goodDate),
            $("<td data-label='Trail Image'>").html("<img class='trl-img' src=" + image + ">"),
