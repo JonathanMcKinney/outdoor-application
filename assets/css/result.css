@@ -4,6 +4,17 @@ body{
    background-color: black;
  }
   
+ .anchor-nav {
+   color: white;
+ }
+
+ .anchor-name {
+   color: black;
+ }
+
+ .placeholder {
+   color: grey;
+ }
  
 .responsive-card-table {
     border-collapse: collapse;
@@ -252,6 +263,17 @@ body{
     .translucent-form-overlay input::placeholder {
       color: #8a8a8a;
     } 
+
+    .trl-img {
+      max-width: 100px;
+    }
+
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
   
     button {
       position: relative;
