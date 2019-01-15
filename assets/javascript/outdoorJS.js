@@ -79,7 +79,8 @@
         var length = results[i].length;
         var difficulty = results[i].difficulty;
         var cStatus = results[i].conditionStatus;
-        var cDate = results[i].conditionDate;
+        var cDate = moment(results[i].conditionDate, "YYYY-MM-DD HH:mm:ss");
+        var goodDate = cDate.format("MM-DD-YYYY");
         var image = results[i].imgSqSmall;
 
         console.log(cStatus)
@@ -89,7 +90,7 @@
             $("<td>").text(length + " miles"),
             $("<td>").text(difficulty),
             $("<td>").text(cStatus),
-            $("<td>").text(cDate),
+            $("<td>").text(goodDate),
             $("<td>").html("<img src=" + image + ">"),
         );
  
