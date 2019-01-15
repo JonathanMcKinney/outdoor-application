@@ -102,11 +102,11 @@ var results = nowParsed.trails;
        console.log(cStatus)
 
        var tableRow = $("<tr>").append(
-           $("<td class='anchor-name' data-label='Name'>").html("<strong><a href=" + results[i].url + ">" + name + "</a></strong>"),
+           $("<td data-label='Name'>").html("<a href=" + results[i].url + " class='anchor-name'>" + name + "</a>"),
            $("<td data-label='Length'>").text(length + " miles"),
             $("<td data-label='Location'>").text(difficulty),
            $("<td data-label='Status'>").text(cStatus),
-           $("<td data-label='5 Star Rating'>").text(goodDate),
+           $("<td data-label='Last Updated'>").text(goodDate),
            $("<td data-label='Trail Image'>").html("<img class='trl-img' src=" + image + ">"),
        );
        $("tbody").append(tableRow);
