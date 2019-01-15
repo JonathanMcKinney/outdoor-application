@@ -18,6 +18,10 @@
 
  
 }
+
+body{
+  background: black;
+}
 .logo{
   top:15px;
   position:relative;
