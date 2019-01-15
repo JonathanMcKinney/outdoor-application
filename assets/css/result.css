@@ -4,6 +4,7 @@ body{
    background-color: black;
  }
   
+ 
 .responsive-card-table {
     border-collapse: collapse;
   }
@@ -24,15 +25,15 @@ body{
   
   @media screen and (max-width: 640px) {
     .responsive-card-table {
-        top: 100px;
       
     }
 
     
     .responsive-card-table thead tr {
       position: absolute;
-      top: -9999em;
+      top:-9999em;
       left: -9999em;
+      
     }
     .responsive-card-table tr {
       border: 1px solid #0a0a0a;
@@ -59,8 +60,8 @@ body{
     .responsive-card-table td:before {
       content: attr(data-label);
       display: inline-block;
-      font-weight: bold;
-      line-height: 1.5;
+       font-weight: bold;
+       line-height: 1.5; 
       margin-left: -100%;
       width: 100%;
       position: relative;
@@ -75,6 +76,7 @@ body{
       left: 1px;
       top: 1px;
       z-index: 0;
+      
     }
   }
  
@@ -223,7 +225,7 @@ body{
       padding: 20px;
       color: #fefefe;
       position: relative;
-      top: -15vh;
+      top: -20vh;
     }
     
     .translucent-form-overlay .columns.row {
@@ -254,3 +256,6 @@ body{
     button {
       position: relative;
     }
+
+  
+

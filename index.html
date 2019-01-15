@@ -8,74 +8,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css"
         integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
-        crossorigin="anonymous">   
-   
+        crossorigin="anonymous">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/outdoorStyle.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script>
-        jQuery.ajaxPrefilter(function(options) {
-         if (options.crossDomain && jQuery.support.cors) {
-          options.url = 'https://uncc-cors-proxy.herokuapp.com/' + options.url;
-      }
-    });
+        jQuery.ajaxPrefilter(function (options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                options.url = 'https://uncc-cors-proxy.herokuapp.com/' + options.url;
+            }
+        });
     </script>
-
-</head> 
- 
-<div class="slider">
-    <img class="mySlides" src="assets/images/img1.jpg">
-    <img class="mySlides" src="assets/images/img2.jpg">
-    <img class="mySlides" src="assets/images/img3.jpg">
-    <img class="mySlides" src="assets/images/img4.jpg">
-</div>
+</head>
+<header class="header">
+    <img class="logo" src="assets/images/logo7.png">
+</header>
 <body>
-    <header class="header">
-        <h1>Hikeable</h1>
-        <p class="subtitle">Find your path.</p>
-    </header>
-    <div class="hero-full-screen">
-        <div class="middle-content-section">
-            <div class="translucent-form-overlay">
-                <form>
-                    <h3>Search Trails</h3>
-                    <div class="row columns">
-                        <label>Location
-                            <input type="text" name="keyword" placeholder="Location" id="location-input">
-                        </label>
-                    </div>
-                    <div class="row columns">
-                        <label>Activity
-                            <select name="status" type="text" id="activity">
-                                <option>Activity</option>
-                                <option value="hiking">Hiking</option>
-                                <option value="biking">Mountain Biking</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="row columns">
-                        <label>Distance
-                            <select name="status" type="text"  id="distance">
-                                <option>Distance</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="50">50</option>
-                            </select>
-                        </label>
-                    </div>
-                    <button type="button" class="primary button expanded search-button" id="submitButton">
-                        Search
-                    </button>
-                </form>
-            </div>
+    <div class="container">
+        <div class="slider">
+            <img class="mySlides" src="assets/images/img1.jpg">
+            <img class="mySlides" src="assets/images/img2.jpg">
+            <img class="mySlides" src="assets/images/img3.jpg">
+            <img class="mySlides" src="assets/images/img4.jpg">
         </div>
-        <a id="anchorID" href="results.html" target="_self"></a>
-        <footer class="footer">
+        <div class="hero-full-screen">
+            <div class="middle-content-section">
+                <div class="translucent-form-overlay">
+                    <form>
+                        <h3>Search Trails</h3>
+                        <div class="row columns">
+                            <label>Location
+                                <input type="text" name="keyword" placeholder="Location" id="location-input">
+                            </label>
+                        </div>
+                        <div class="row columns">
+                            <label>Activity
+                                <select name="status" type="text" id="activity">
+                                    <option>Activity</option>
+                                    <option value="hiking">Hiking</option>
+                                    <option value="biking">Mountain Biking</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="row columns">
+                            <label>Distance
+                                <select name="status" type="text" id="distance">
+                                    <option>Distance</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </label>
+                        </div>
+                        <button type="button" class="primary button expanded search-button" id="submitButton">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <a id="anchorID" href="results.html" target="_self"></a>
+            <footer class="footer">
             <p class="copy"><strong>Hikeable:</strong> by Clark Farriss, William Harrison, Michael Howell, and Jonathan McKinney</p>
         </footer>
+        </div>
     </div>
     <script src="assets/javascript/outdoorJS.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
