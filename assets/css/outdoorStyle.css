@@ -1,7 +1,7 @@
 /* body css starts here */
 @media screen and (max-width: 1100px){
  body { 
-   background: url("../images/img2.JPG");
+   background: url("../images/img2.jpg");
    background-position: center center;
    background-size: auto;
    background-repeat: none;
